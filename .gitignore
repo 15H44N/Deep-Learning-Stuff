@@ -10,6 +10,7 @@ dataset/
 images_aug/
 NST/
 NST/
+_posts/
 
 # IPython
 profile_default/
