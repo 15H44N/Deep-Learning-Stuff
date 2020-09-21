@@ -3,7 +3,7 @@
 
     \usepackage[breakable]{tcolorbox}
     \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
-    
+
     \usepackage{iftex}
     \ifPDFTeX
     	\usepackage[T1]{fontenc}
@@ -42,7 +42,7 @@
     \usepackage{eurosym} % defines \euro
     \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
     \usepackage{fancyvrb} % verbatim replacement that allows latex
-    \usepackage{grffile} % extends the file name processing of package graphics 
+    \usepackage{grffile} % extends the file name processing of package graphics
                          % to support a larger range
     \makeatletter % fix for grffile with XeLaTeX
     \def\Gread@@xetex#1{%
@@ -65,9 +65,9 @@
     \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                                 % normalem makes italics be italics, not underlines
     \usepackage{mathrsfs}
-    
 
-    
+
+
     % Colors for the hyperref package
     \definecolor{urlcolor}{rgb}{0,.145,.698}
     \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
@@ -114,7 +114,7 @@
     \newcommand{\RegionMarkerTok}[1]{{#1}}
     \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
     \newcommand{\NormalTok}[1]{{#1}}
-    
+
     % Additional commands for more recent versions of Pandoc
     \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
     \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
@@ -133,8 +133,8 @@
     \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
     \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
     \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-    
-    
+
+
     % Define a nice break command that doesn't care if a line doesn't already
     % exist.
     \def\br{\hspace*{\fill} \\* }
@@ -148,11 +148,11 @@
     % Document parameters
     % Document title
     \title{Neural Style Transfer}
-    
-    
-    
-    
-    
+
+
+
+
+
 % Pygments definitions
 \makeatletter
 \def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
@@ -255,53 +255,53 @@
 \makeatother
 
 
-    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    % For linebreaks inside Verbatim environment from package fancyvrb.
     \makeatletter
-        \newbox\Wrappedcontinuationbox 
-        \newbox\Wrappedvisiblespacebox 
-        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
-        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
-        \newcommand*\Wrappedcontinuationindent {3ex } 
-        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
-        % Take advantage of the already applied Pygments mark-up to insert 
-        % potential linebreaks for TeX processing. 
-        %        {, <, #, %, $, ' and ": go to next line. 
-        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
-        % Use of \textquotesingle for straight quote. 
-        \newcommand*\Wrappedbreaksatspecials {% 
-            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
-            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
-            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
-            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
-            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
-            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
-            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
-            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
-            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
-            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
-            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
-            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
-            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
-            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
-        } 
-        % Some characters . , ; ? ! / are not pygmentized. 
-        % This macro makes them "active" and they will insert potential linebreaks 
-        \newcommand*\Wrappedbreaksatpunct {% 
-            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
-            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
-            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
-            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
-            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
-            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
-            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+        \newbox\Wrappedcontinuationbox
+        \newbox\Wrappedvisiblespacebox
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}}
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}}
+        \newcommand*\Wrappedcontinuationindent {3ex }
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox}
+        % Take advantage of the already applied Pygments mark-up to insert
+        % potential linebreaks for TeX processing.
+        %        {, <, #, %, $, ' and ": go to next line.
+        %        _, }, ^, &, >, - and ~: stay at end of broken line.
+        % Use of \textquotesingle for straight quote.
+        \newcommand*\Wrappedbreaksatspecials {%
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}%
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}%
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}%
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}%
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}%
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}%
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}%
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}%
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}%
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}%
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}%
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}%
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}%
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}%
+        }
+        % Some characters . , ; ? ! / are not pygmentized.
+        % This macro makes them "active" and they will insert potential linebreaks
+        \newcommand*\Wrappedbreaksatpunct {%
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}%
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}%
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}%
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}%
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}%
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}%
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}%
             \catcode`\.\active
-            \catcode`\,\active 
+            \catcode`\,\active
             \catcode`\;\active
             \catcode`\:\active
             \catcode`\?\active
             \catcode`\!\active
-            \catcode`\/\active 
-            \lccode`\~`\~ 	
+            \catcode`\/\active
+            \lccode`\~`\~
         }
     \makeatother
 
@@ -324,10 +324,10 @@
             \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
             {\kern\fontdimen2\font}%
         }%
-        
+
         % Allow breaks at special characters using \PYG... macros.
         \Wrappedbreaksatspecials
-        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active
         \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
     }
     \makeatother
@@ -337,7 +337,7 @@
     \definecolor{outcolor}{HTML}{D84315}
     \definecolor{cellborder}{HTML}{CFCFCF}
     \definecolor{cellbackground}{HTML}{F7F7F7}
-    
+
     % prompt
     \makeatletter
     \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
@@ -345,11 +345,11 @@
     \newcommand{\prompt}[4]{
         \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
     }
-    
 
-    
+
+
     % Prevent overflowing lines due to hard-to-break entities
-    \sloppy 
+    \sloppy
     % Setup hyperref package
     \hypersetup{
       breaklinks=true,  % so long urls are correctly broken across lines
@@ -359,10 +359,10 @@
       citecolor=citecolor,
       }
     % Slightly bigger margins than the latex defaults
-    
+
     \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
-    
-    
+
+
 
 \begin{document}
 \author {Ishaan Aditya}
@@ -393,7 +393,7 @@ output will be the encoding of each of the images\\
 Then we will pass each of them through a \textbf{custom} loss function,
 as below:
 
-\[ 
+\[
 \mathcal{L}_{Total} (G) = \alpha \mathcal{L}_{content}(C,G) + \beta \mathcal{L}_{style} (S,G)
 \]
 \\
@@ -431,7 +431,7 @@ image. This is a bit tricky, so, lets look at the formula first.
 \[
  G_{ij}^{l} = \sum_{k} g_{ik}^{l} \cdot  g_{jk}^{l} \\
 \]
- 
+
 \[
 S_{ij}^{l} = \sum_{k} s_{ik}^{l} \cdot  s_{jk}^{l}
 \]
@@ -496,7 +496,7 @@ We will take each layer after maxpooling layer\\ \\
 \end{figure}
 
 
-\pagebreak 
+\pagebreak
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{4}{\boxspacing}
 
@@ -564,15 +564,15 @@ ceil\_mode=False)
         \PY{c+c1}{\PYZsh{}\PYZsh{} chosen features are ones who have different channels}
         \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{chosen\PYZus{}features} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{10}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{19}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{28}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
         \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{model} \PY{o}{=} \PY{n}{models}\PY{o}{.}\PY{n}{vgg19}\PY{p}{(}\PY{n}{pretrained}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}\PY{o}{.}\PY{n}{features}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{29}\PY{p}{]}
-    
+
     \PY{k}{def} \PY{n+nf}{forward}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{:}
         \PY{n}{features} \PY{o}{=} \PY{p}{[}\PY{p}{]}
         \PY{k}{for} \PY{n}{layer\PYZus{}num}\PY{p}{,} \PY{n}{layer} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{model}\PY{p}{)}\PY{p}{:}
             \PY{n}{x} \PY{o}{=} \PY{n}{layer}\PY{p}{(}\PY{n}{x}\PY{p}{)}
-            
+
             \PY{k}{if} \PY{n+nb}{str}\PY{p}{(}\PY{n}{layer\PYZus{}num}\PY{p}{)} \PY{o+ow}{in} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{chosen\PYZus{}features}\PY{p}{:}
                 \PY{n}{features}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{x}\PY{p}{)}
-            
+
         \PY{k}{return} \PY{n}{features}
 \end{Verbatim}
 \end{tcolorbox}
@@ -637,7 +637,7 @@ ceil\_mode=False)
 \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
 \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
 \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
-\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{image} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{p}{(}\PY{n}{original\PYZus{}img}\PY{p}{,}\PY{n}{style\PYZus{}img}\PY{p}{)}\PY{p}{)}\PY{p}{:}    
+\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{image} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{p}{(}\PY{n}{original\PYZus{}img}\PY{p}{,}\PY{n}{style\PYZus{}img}\PY{p}{)}\PY{p}{)}\PY{p}{:}
     \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
     \PY{n}{plt}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{off}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
     \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Original}\PY{l+s+s1}{\PYZsq{}} \PY{k}{if} \PY{n}{i}\PY{o}{==}\PY{l+m+mi}{0} \PY{k}{else} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Style}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -650,7 +650,7 @@ ceil\_mode=False)
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_0.png}
     \end{center}
     { \hspace*{\fill} \\}
-    
+
     Now, the generated image can be initialized in two ways: 1. As discussed
 before, it may be Gaussian Noise. This may be achieved by
 \textgreater{}\texttt{python\ \ \ \ \ torch.randn(original\_img.shape,device,requires\_grad\ =\ True)}
@@ -694,38 +694,38 @@ function optimizes only the Generated image.
     \PY{n}{generated\PYZus{}features} \PY{o}{=} \PY{n}{model}\PY{p}{(}\PY{n}{generated}\PY{p}{)}
     \PY{n}{original\PYZus{}img\PYZus{}features} \PY{o}{=} \PY{n}{model}\PY{p}{(}\PY{n}{original\PYZus{}img}\PY{p}{)}
     \PY{n}{style\PYZus{}features} \PY{o}{=} \PY{n}{model}\PY{p}{(}\PY{n}{style\PYZus{}img}\PY{p}{)}
-    
+
     \PY{n}{style\PYZus{}loss} \PY{o}{=} \PY{n}{original\PYZus{}loss} \PY{o}{=} \PY{l+m+mi}{0}
-    
+
     \PY{c+c1}{\PYZsh{}now iterating throguh all features}
     \PY{k}{for} \PY{n}{gen\PYZus{}feature}\PY{p}{,} \PY{n}{orig\PYZus{}feature}\PY{p}{,} \PY{n}{style\PYZus{}feature} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}
         \PY{n}{generated\PYZus{}features}\PY{p}{,} \PY{n}{original\PYZus{}img\PYZus{}features}\PY{p}{,} \PY{n}{style\PYZus{}features}\PY{p}{)}\PY{p}{:}
-        
+
         \PY{n}{batch\PYZus{}size}\PY{p}{,} \PY{n}{channel}\PY{p}{,} \PY{n}{height}\PY{p}{,} \PY{n}{width} \PY{o}{=} \PY{n}{gen\PYZus{}feature}\PY{o}{.}\PY{n}{shape}
         \PY{n}{original\PYZus{}loss} \PY{o}{+}\PY{o}{=} \PY{n}{torch}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{(}\PY{n}{gen\PYZus{}feature} \PY{o}{\PYZhy{}} \PY{n}{orig\PYZus{}feature}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
-        
+
         \PY{c+c1}{\PYZsh{}gram matrix}
         \PY{n}{G} \PY{o}{=} \PY{n}{gen\PYZus{}feature}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{n}{channel}\PY{p}{,} \PY{n}{height}\PY{o}{*}\PY{n}{width}\PY{p}{)}\PY{o}{.}\PY{n}{mm}\PY{p}{(}
             \PY{n}{gen\PYZus{}feature}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{n}{channel}\PY{p}{,} \PY{n}{height}\PY{o}{*}\PY{n}{width}\PY{p}{)}\PY{o}{.}\PY{n}{t}\PY{p}{(}\PY{p}{)}
         \PY{p}{)}
-        
+
         \PY{n}{S} \PY{o}{=} \PY{n}{style\PYZus{}feature}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{n}{channel}\PY{p}{,} \PY{n}{height}\PY{o}{*}\PY{n}{width}\PY{p}{)}\PY{o}{.}\PY{n}{mm}\PY{p}{(}
             \PY{n}{style\PYZus{}feature}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{n}{channel}\PY{p}{,} \PY{n}{height}\PY{o}{*}\PY{n}{width}\PY{p}{)}\PY{o}{.}\PY{n}{t}\PY{p}{(}\PY{p}{)}
         \PY{p}{)}
-        
+
         \PY{n}{style\PYZus{}loss} \PY{o}{+}\PY{o}{=} \PY{n}{torch}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{(}\PY{n}{G} \PY{o}{\PYZhy{}} \PY{n}{S}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
-        
+
     \PY{n}{total\PYZus{}loss} \PY{o}{=} \PY{n}{alpha}\PY{o}{*}\PY{n}{original\PYZus{}loss} \PY{o}{+} \PY{n}{beta}\PY{o}{*}\PY{n}{style\PYZus{}loss}
-    
+
     \PY{n}{optimizer}\PY{o}{.}\PY{n}{zero\PYZus{}grad}\PY{p}{(}\PY{p}{)}
     \PY{n}{total\PYZus{}loss}\PY{o}{.}\PY{n}{backward}\PY{p}{(}\PY{p}{)}
     \PY{n}{optimizer}\PY{o}{.}\PY{n}{step}\PY{p}{(}\PY{p}{)}
-    
+
     \PY{k}{if} \PY{n}{step}\PY{o}{\PYZpc{}}\PY{l+m+mi}{200} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Step: }\PY{l+s+si}{\PYZob{}}\PY{n}{step}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ Loss: }\PY{l+s+si}{\PYZob{}}\PY{n}{total\PYZus{}loss}\PY{o}{.}\PY{n}{item}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n}{save\PYZus{}image}\PY{p}{(}\PY{n}{generated}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{NST/out/generated }\PY{l+s+si}{\PYZob{}\PYZcb{}}\PY{l+s+s2}{.png}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{step}\PY{o}{/}\PY{l+m+mi}{200}\PY{p}{)}\PY{p}{)}\PY{p}{)}        
-    
-        
+        \PY{n}{save\PYZus{}image}\PY{p}{(}\PY{n}{generated}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{NST/out/generated }\PY{l+s+si}{\PYZob{}\PYZcb{}}\PY{l+s+s2}{.png}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n}{step}\PY{o}{/}\PY{l+m+mi}{200}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+
+
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -781,7 +781,7 @@ Wall time: 29min 19s
 \PY{n}{imageio}\PY{o}{.}\PY{n}{mimsave}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NST/out/1NST.gif}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{images}\PY{p}{,}\PY{n}{duration} \PY{o}{=} \PY{l+m+mf}{0.5}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-    
+
 \pagebreak
     \hypertarget{generated-image-at-last-step}{%
 \paragraph{Generated Image at Last
@@ -792,7 +792,7 @@ Step}\label{generated-image-at-last-step}}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{15}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
 \PY{n}{titles} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Original}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Style}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Generated}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
-\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{image} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{p}{(}\PY{n}{original\PYZus{}img}\PY{p}{,}\PY{n}{style\PYZus{}img}\PY{p}{,}\PY{n}{load\PYZus{}image}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{NST/out/5800.png}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{not o}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{:}    
+\PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{image} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{p}{(}\PY{n}{original\PYZus{}img}\PY{p}{,}\PY{n}{style\PYZus{}img}\PY{p}{,}\PY{n}{load\PYZus{}image}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{NST/out/5800.png}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{not o}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{:}
     \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
     \PY{n}{plt}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{off}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
     \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{n}{titles}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
@@ -805,10 +805,10 @@ Step}\label{generated-image-at-last-step}}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_29_0.png}
     \end{center}
     { \hspace*{\fill} \\}
-    
+
 
     % Add a bibliography block to the postdoc
-    
-    
-    
+
+
+
 \end{document}
