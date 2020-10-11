@@ -5,6 +5,7 @@ out.zip
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+archive/
 
 dataset/
 images_aug/
