@@ -9,11 +9,11 @@ archive/
 
 dataset/
 images_aug/
+Datasets/
 NST/
 NST/
 _posts/
-
-
+logs/
 
 # IPython
 profile_default/
